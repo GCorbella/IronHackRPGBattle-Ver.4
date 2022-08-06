@@ -66,6 +66,7 @@ public class Combat {
             System.out.println(fighter2.getName() + " deals " + damageF2[0] + "damage.");
             fighter1.setHp(fighter1.getHp() - damageF2[0]);
             fighter2.setHp(fighter2.getHp() - damageF1[0]);
+            Thread.sleep(2000);
         }
         if (fighter1.getHp <= 0){
             graveyard += kill(fighter1, fighter2);
