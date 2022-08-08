@@ -11,8 +11,8 @@ public class Combat {
     //content variables
     ArrayList<Character> team1;
     String team1Name = Menu.getTeam1Name;
-    String team2Name = Menu.getTeam2Name;
     ArrayList<Character> team2;
+    String team2Name = Menu.getTeam2Name;
     ArrayList<Character> corpses;
     String graveyard = "The graveyard contains the corpses of the next fighters:\n";
 
