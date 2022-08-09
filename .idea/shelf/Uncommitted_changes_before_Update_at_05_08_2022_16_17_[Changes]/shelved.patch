@@ -1,0 +1,128 @@
+Index: src/Warrior.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Warrior.java b/src/Warrior.java
+deleted file mode 100644
+--- a/src/Warrior.java	(revision 2543b62a446524585afd2eed711107024c5f505a)
++++ /dev/null	(revision 2543b62a446524585afd2eed711107024c5f505a)
+@@ -1,2 +0,0 @@
+-public class Warrior {
+-}
+Index: src/Character.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Character.java b/src/Character.java
+deleted file mode 100644
+--- a/src/Character.java	(revision 2543b62a446524585afd2eed711107024c5f505a)
++++ /dev/null	(revision 2543b62a446524585afd2eed711107024c5f505a)
+@@ -1,2 +0,0 @@
+-public class Character {
+-}
+Index: src/Wizard.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Wizard.java b/src/Wizard.java
+deleted file mode 100644
+--- a/src/Wizard.java	(revision 2543b62a446524585afd2eed711107024c5f505a)
++++ /dev/null	(revision 2543b62a446524585afd2eed711107024c5f505a)
+@@ -1,2 +0,0 @@
+-public class Wizard {
+-}
+Index: src/Characters/Character.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Characters/Character.java b/src/Characters/Character.java
+new file mode 100644
+--- /dev/null	(date 1659708945632)
++++ b/src/Characters/Character.java	(date 1659708945632)
+@@ -0,0 +1,2 @@
++package Characters;public class Character {
++}
+Index: src/Characters/Attacks.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Characters/Attacks.java b/src/Characters/Attacks.java
+new file mode 100644
+--- /dev/null	(date 1659708945632)
++++ b/src/Characters/Attacks.java	(date 1659708945632)
+@@ -0,0 +1,4 @@
++package Characters;
++
++public interface Attacks {
++}
+Index: src/Characters/Wizard.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Characters/Wizard.java b/src/Characters/Wizard.java
+new file mode 100644
+--- /dev/null	(date 1659708945632)
++++ b/src/Characters/Wizard.java	(date 1659708945632)
+@@ -0,0 +1,2 @@
++package Characters;public class Wizard {
++}
+Index: src/Characters/Warrior.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Characters/Warrior.java b/src/Characters/Warrior.java
+new file mode 100644
+--- /dev/null	(date 1659708945632)
++++ b/src/Characters/Warrior.java	(date 1659708945632)
+@@ -0,0 +1,2 @@
++package Characters;public class Warrior {
++}
+Index: src/Teams/Teams.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Teams/Teams.java b/src/Teams/Teams.java
+new file mode 100644
+--- /dev/null	(date 1659708945632)
++++ b/src/Teams/Teams.java	(date 1659708945632)
+@@ -0,0 +1,4 @@
++package Teams;
++
++public class Teams {
++}
+Index: src/Combat/Combat.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Combat/Combat.java b/src/Combat/Combat.java
+new file mode 100644
+--- /dev/null	(date 1659708945632)
++++ b/src/Combat/Combat.java	(date 1659708945632)
+@@ -0,0 +1,4 @@
++package Combat;
++
++public class Combat {
++}
+Index: src/Menu/Menu.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Menu/Menu.java b/src/Menu/Menu.java
+new file mode 100644
+--- /dev/null	(date 1659708945632)
++++ b/src/Menu/Menu.java	(date 1659708945632)
+@@ -0,0 +1,4 @@
++package Menu;
++
++public class Menu {
++}
