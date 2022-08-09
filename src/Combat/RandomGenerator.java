@@ -4,7 +4,7 @@ import Characters.Warrior;
 import Characters.Wizard;
 
 import java.util.Random;
-Import.java.util.Random;
+
 
 public class RandomGenerator {
 

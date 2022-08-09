@@ -15,7 +15,7 @@ public abstract class Character implements Attacks {
         setName(name);
         setHp(hp);
         setAlive(isAlive);
-        setId();
+        setId(id);
     }
     //damage  method
     public void damage(int damage) {
@@ -23,6 +23,7 @@ public abstract class Character implements Attacks {
         if (getHp() <= 0) {
             setAlive(false);
         }
+
         public abstract int[] attack();
 
         //establece el id como número de contador en el momento de la instancia

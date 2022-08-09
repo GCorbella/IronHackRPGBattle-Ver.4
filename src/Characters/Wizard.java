@@ -8,8 +8,8 @@ public class Wizard extends Character {
 
     public Wizard(String name, int hp, int mana, int intelligence) {
         super(name, hp);
-        this.mana = mana;
-        this.intelligence = intelligence;
+        setMana(mana);
+        setIntelligence(intelligence);
         setClassName("Wizard");
     }
     // method attack.
