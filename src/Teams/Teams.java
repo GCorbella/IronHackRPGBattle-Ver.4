@@ -8,6 +8,7 @@ public class Teams {
 
 public static Character[] createNewTeam(){
 
+
     Character[] newTeam = new Character[5];
     for (int i=0; i< newTeam().length;i++){
         newTeam[i]= new Character;
