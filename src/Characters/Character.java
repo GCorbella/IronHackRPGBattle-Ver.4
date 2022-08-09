@@ -17,26 +17,15 @@ public abstract class Character implements Attacks {
         setAlive(isAlive);
         setId(id);
     }
-    //damage  method
-    public void damage(int damage) {
-        setHp(getHp() - damage);
-        if (getHp() <= 0) {
-            setAlive(false);
-        }
+    public abstract int[] attack();
 
-        public abstract int[] attack();
-
-        //establece el id como número de contador en el momento de la instancia
-        public void setId() {
-            this.id = counter;
-        }
-
-
-    }
     //Getters & setters
 
     public int getId() {
         return id;
+    }
+    public void setId() {
+        this.id = counter;
     }
 
     public String getName() {

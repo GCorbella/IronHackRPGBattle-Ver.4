@@ -18,13 +18,13 @@ public class Wizard extends Character {
 
         int[] damage = new int[2];
 
-        //fuerte
+
         if( getMana() >= 5 ) {
             damage[0] = getIntelligence();
             setMana(getMana() + 1);
             damage[1] = 1;
         }
-        //debil
+
         else {
             damage[0] = 2;
             setMana(getMana() + 1);
