@@ -1,4 +1,4 @@
-package PACKAGE_NAME;
+package Characters;
 public class Warrior extends Character {
     private int stamina;
     private int strength;

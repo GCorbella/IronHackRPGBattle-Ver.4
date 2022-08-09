@@ -1,4 +1,6 @@
-package PACKAGE_NAME;
+package Characters;
+
+
 public abstract class Character implements Attacks {
     private static int counter = 0;
     private int id;
@@ -15,7 +17,6 @@ public abstract class Character implements Attacks {
         setAlive(isAlive);
         setId();
     }
-
     //damage  method
     public void damage(int damage) {
         setHp(getHp() - damage);

@@ -1,4 +1,4 @@
-package PACKAGE_NAME;
+package Characters;
 public class Wizard extends Character {
 
 
