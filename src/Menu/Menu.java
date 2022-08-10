@@ -1,4 +1,5 @@
 package Menu;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
@@ -25,6 +26,9 @@ public class Menu {
             switch (opcion) {
                 case 1:
                     System.out.println("1. Jugar con equipos random");
+                    ArrayList<Character>team1 = Teams.Teams.createNewTeam(5);
+                    ArrayList<Character>team2 = Teams.Teams.createNewTeam(5);
+                    Combat.Combat.combat(team1,team2);
                     break;
                 case 2:
                     System.out.println("2. Selecciona tus equipos");
