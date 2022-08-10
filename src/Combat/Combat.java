@@ -8,21 +8,21 @@ import java.util.Scanner;
 
 public class Combat {
     //functioning variables
-    static Random random = new Random();
-    static Scanner sc = new Scanner(System.in);
+    Random random = new Random();
+    Scanner sc = new Scanner(System.in);
     //content variables
-    static ArrayList<Character> team1;
+    ArrayList<Character> team1;
     //String team1Name = Menu.getTeam1Name;
-    static ArrayList<Character> team2;
+    ArrayList<Character> team2;
     //String team2Name = Menu.getTeam2Name;
-    static ArrayList<Character> corpses;
-    static String graveyard = "The graveyard contains the corpses of the next fighters:\n";
+    ArrayList<Character> corpses = new ArrayList<>();
+    String graveyard = "The graveyard contains the corpses of the next fighters:\n";
 
     //principal combat method that implements all the other methods
-    public static void battle(ArrayList<Character> team1, ArrayList<Character> team2) throws InterruptedException {
-        while (team1.size() != 0 || team2.size() != 0){
+    public void battle(ArrayList<Character> team1, ArrayList<Character> team2) throws InterruptedException {
+        while (!team1.isEmpty() || !team2.isEmpty()){
             boolean run = false;
-            fight(team1.get(random.nextInt(0,team1.size()-1)), team2.get(random.nextInt(0,team2.size()-1)));
+            fight(team1.get(random.nextInt(0,team1.size())), team2.get(random.nextInt(0,team2.size())));
             System.out.println("The combat is over.");
             while (run == false) {
                 System.out.println("""
@@ -30,10 +30,10 @@ public class Combat {
                         1.- Next combat.
                         2.- Visit the graveyard.""");
                 String option = sc.nextLine();
-                if (option == "1"){
+                if (option.equals("1")){
                     run = true;
                 }
-                else if (option == "2") {
+                else if (option.equals("2")) {
                     showGraveyard();
                 }
                 else {
@@ -59,28 +59,31 @@ public class Combat {
     }
 
     //fight method that confront une fighter vs another
-    public static void fight(Character fighter1, Character fighter2) throws InterruptedException {
-        while (fighter1.getHp() >= 0 || fighter2.getHp() >= 0) {
+    public void fight(Character fighter1, Character fighter2) throws InterruptedException {
+        boolean noDeads = false;
+        while (noDeads == false) {
             int[] damageF1 = fighter1.attack();
             int[] damageF2 = fighter2.attack();
             System.out.println("The fighters attack each other!");
-            System.out.println("--------------------------------------------");
+            System.out.println("-------------------------------------------");
             System.out.println(fighter1.getName() + " deals " + damageF1[0] + " damage.");
             System.out.println(fighter2.getName() + " deals " + damageF2[0] + " damage.");
             fighter1.setHp(fighter1.getHp() - damageF2[0]);
             fighter2.setHp(fighter2.getHp() - damageF1[0]);
             System.out.println("===========================================");
             Thread.sleep(1000);
-        }
-        if (fighter1.getHp() <= 0){
-            graveyard += kill(fighter1, fighter2);
-        }
-        if (fighter2.getHp() <= 0) {
-            graveyard += kill(fighter2, fighter1);
+            if (fighter1.getHp() <= 0){
+                noDeads = true;
+                kill(fighter1, fighter2);
+            }
+            if (fighter2.getHp() <= 0) {
+                noDeads = true;
+                kill(fighter2, fighter1);
+            }
         }
     }
-    public static String kill(Character dead, Character killer){
-        String death = dead.getName() + ", who was killed by " + killer.getName() + "\n";
+    public void kill(Character dead, Character killer){
+        graveyard += dead.getName() + ", who was killed by " + killer.getName() + "\n";
         if(team1.contains(dead)){
             team1.remove(dead);
             corpses.add(dead);
@@ -91,10 +94,8 @@ public class Combat {
             dead.setAlive(false);
         }
         System.out.println(dead.getName() + ", was killed by " + killer.getName());
-        System.out.println(killer.getName() + "is the winner!");
-        return death;
     }
-    public static void showGraveyard(){
+    public void showGraveyard(){
         System.out.println(graveyard);
     }
 

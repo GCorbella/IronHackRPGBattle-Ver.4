@@ -53,14 +53,14 @@ public class RandomGenerator {
 
 
     public static Warrior getRandomWarrior() {
-        return new Warrior(WARRIOR_NAME[new Random().nextInt(WARRIOR_NAME.length)],
+        return new Warrior(WARRIOR_NAME[new Random().nextInt(WARRIOR_NAME.length - 1)],
                 new Random().nextInt(HP_WARRIOR_MIN + 1) + HP_WARRIOR_MAX - HP_WARRIOR_MIN,
                 new Random().nextInt(STAMINA_MIN + 1) + STAMINA_MAX - STAMINA_MIN,
                 new Random().nextInt(STRENGTH_MIN + 1) + STRENGTH_MAX - STRENGTH_MIN);
     }
 
     public static Wizard getRandomWizard() {
-        return new Wizard(WIZARD_NAME[new Random().nextInt(WARRIOR_NAME.length)],
+        return new Wizard(WIZARD_NAME[new Random().nextInt(WARRIOR_NAME.length - 1)],
                 new Random().nextInt(HP_WIZARD_MIN + 1) + HP_WIZARD_MAX - HP_WIZARD_MIN,
                 new Random().nextInt(MANA_MIN + 1) + MANA_MAX - MANA_MIN,
                 new Random().nextInt(INTELLIGENCE_MIN + 1) + INTELLIGENCE_MAX - INTELLIGENCE_MIN);

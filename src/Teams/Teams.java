@@ -9,7 +9,7 @@ import static Teams.RandomGenerator.getRandomWarrior;
 import static Teams.RandomGenerator.getRandomWizard;
 
 public class Teams {
-    public static ArrayList<Character> createNewTeam(int numb) {
+    public static ArrayList<Character> createNewTeam1(int numb) {
         ArrayList<Character> newTeam = new ArrayList<>();
 
         for (int i = 0; i <= numb - 1; i++) {
@@ -19,6 +19,22 @@ public class Teams {
             }if (dice > 5) {
                 newTeam.add(getRandomWizard());
             }
+            newTeam.get(i).setName(newTeam.get(i).getName() + " of Team 1");
+        }
+        return newTeam;
+    }
+
+    public static ArrayList<Character> createNewTeam2(int numb) {
+        ArrayList<Character> newTeam = new ArrayList<>();
+
+        for (int i = 0; i <= numb - 1; i++) {
+            int dice = (int) (Math.random() * 10);
+            if (dice <= 5) {
+                newTeam.add(getRandomWarrior());
+            }if (dice > 5) {
+                newTeam.add(getRandomWizard());
+            }
+            newTeam.get(i).setName(newTeam.get(i).getName() + " of Team 2");
         }
         return newTeam;
     }

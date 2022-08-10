@@ -18,6 +18,7 @@ public class Menu {
         int opcion; //Guardaremos la opcion del usuario
         int Equipo1 = 0;
         int Equipo2 = 0;
+        Combat combat = new Combat();
 
         while (!salir) {
 
@@ -31,9 +32,11 @@ public class Menu {
             switch (opcion) {
                 case 1:
                     System.out.println("1. Jugar con equipos random");
-                    ArrayList<Character> team1 = Teams.createNewTeam(5);
-                    ArrayList<Character> team2 = Teams.createNewTeam(5);
-                    Combat.battle(team1,team2);
+                    ArrayList<Character> team1 = Teams.createNewTeam1(5);
+                    ArrayList<Character> team2 = Teams.createNewTeam2(5);
+                    combat.setTeam1(team1);
+                    combat.setTeam2(team2);
+                    combat.battle(team1,team2);
                     break;
                 case 2:
                     System.out.println("2. Selecciona tus equipos");
