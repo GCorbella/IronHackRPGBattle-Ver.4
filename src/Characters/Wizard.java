@@ -53,10 +53,8 @@ public class Wizard extends Character {
     }
 
     public String toString(){
-        return "Name: " +getName()  + " Type: Wizard HP: " +
-                getHp() + " Intelligence: " + getIntelligence() +" Mana: " + getMana() + "\n";
+        return "Name: " +getName()  + " |Type: Wizard |HP: " +
+                getHp() + " |Intelligence: " + getIntelligence() +" |Mana: " + getMana() + "\n";
     }
 }
 
-
-}

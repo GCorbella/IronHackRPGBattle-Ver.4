@@ -44,8 +44,8 @@ public class Warrior extends Character {
 
 
     public String toString(){
-        return "Name: " +getName()  + " Type: Warrior HP: " +
-                getHp() + " Stamina: " + getStamina() +" Strength: " + getStrength() + "\n";
+        return "Name: " +getName()  + " |Type: Warrior |HP: " +
+                getHp() +" |Strength: " + getStrength() + " |Stamina: " + getStamina() + "\n";
     }
 
 

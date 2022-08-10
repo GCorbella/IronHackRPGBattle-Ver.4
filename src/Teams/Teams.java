@@ -12,11 +12,11 @@ public class Teams {
     public static ArrayList<Character> createNewTeam(int numb) {
         ArrayList<Character> newTeam = new ArrayList<>();
 
-        for (int i = 0; i <= numb; i++) {
-            int dice = (int) (Math.random() * 1) + 1;
-            if (dice == 1) {
+        for (int i = 0; i <= numb - 1; i++) {
+            int dice = (int) (Math.random() * 10);
+            if (dice <= 5) {
                 newTeam.add(getRandomWarrior());
-            } else {
+            }if (dice > 5) {
                 newTeam.add(getRandomWizard());
             }
         }

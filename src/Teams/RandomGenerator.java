@@ -24,16 +24,16 @@ public class RandomGenerator {
 
 
     private static final String[] WARRIOR_NAME = {"The Boulder",
-            "Ragnar Lodbrok",
+            "Ragnar Lothbrok",
             "Achilles",
             "Aragorn",
             "Lurtz",
             "El Cid",
-            "Jeanne D´Arc",
-            "Théoden",
+            "Jeanne Du Arc",
+            "Theoden",
             "Faramir",
-            "Éomer",
-            "Éowyn",
+            "Eomer",
+            "Eowyn",
 
 
     };

@@ -1,23 +1,25 @@
 package Combat;
 
+import Characters.Character;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Combat {
     //functioning variables
-    Random random = new Random();
-    Scanner sc = new Scanner(System.in);
+    static Random random = new Random();
+    static Scanner sc = new Scanner(System.in);
     //content variables
-    ArrayList<Character> team1;
-    String team1Name = Menu.getTeam1Name;
-    ArrayList<Character> team2;
-    String team2Name = Menu.getTeam2Name;
-    ArrayList<Character> corpses;
-    String graveyard = "The graveyard contains the corpses of the next fighters:\n";
+    static ArrayList<Character> team1;
+    //String team1Name = Menu.getTeam1Name;
+    static ArrayList<Character> team2;
+    //String team2Name = Menu.getTeam2Name;
+    static ArrayList<Character> corpses;
+    static String graveyard = "The graveyard contains the corpses of the next fighters:\n";
 
     //principal combat method that implements all the other methods
-    public void combat(){
+    public static void battle(ArrayList<Character> team1, ArrayList<Character> team2) throws InterruptedException {
         while (team1.size() != 0 || team2.size() != 0){
             boolean run = false;
             fight(team1.get(random.nextInt(0,team1.size()-1)), team2.get(random.nextInt(0,team2.size()-1)));
@@ -57,25 +59,27 @@ public class Combat {
     }
 
     //fight method that confront une fighter vs another
-    public void fight(Character fighter1, Character fighter2){
+    public static void fight(Character fighter1, Character fighter2) throws InterruptedException {
         while (fighter1.getHp() >= 0 || fighter2.getHp() >= 0) {
             int[] damageF1 = fighter1.attack();
             int[] damageF2 = fighter2.attack();
             System.out.println("The fighters attack each other!");
-            System.out.println(fighter1.getName() + " deals " + damageF1[0] + "damage.");
-            System.out.println(fighter2.getName() + " deals " + damageF2[0] + "damage.");
+            System.out.println("--------------------------------------------");
+            System.out.println(fighter1.getName() + " deals " + damageF1[0] + " damage.");
+            System.out.println(fighter2.getName() + " deals " + damageF2[0] + " damage.");
             fighter1.setHp(fighter1.getHp() - damageF2[0]);
             fighter2.setHp(fighter2.getHp() - damageF1[0]);
-            Thread.sleep(2000);
+            System.out.println("===========================================");
+            Thread.sleep(1000);
         }
-        if (fighter1.getHp <= 0){
+        if (fighter1.getHp() <= 0){
             graveyard += kill(fighter1, fighter2);
         }
-        else {
+        if (fighter2.getHp() <= 0) {
             graveyard += kill(fighter2, fighter1);
         }
     }
-    public String kill(Character dead, Character killer){
+    public static String kill(Character dead, Character killer){
         String death = dead.getName() + ", who was killed by " + killer.getName() + "\n";
         if(team1.contains(dead)){
             team1.remove(dead);
@@ -90,7 +94,7 @@ public class Combat {
         System.out.println(killer.getName() + "is the winner!");
         return death;
     }
-    public void showGraveyard(){
+    public static void showGraveyard(){
         System.out.println(graveyard);
     }
 

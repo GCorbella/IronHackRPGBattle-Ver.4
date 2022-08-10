@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="616fd316-2f45-4b87-8219-7c7c5aebd7ce" name="Changes" comment="Raul merged to develop" />
+    <list default="true" id="616fd316-2f45-4b87-8219-7c7c5aebd7ce" name="Changes" comment="Raul merged to develop">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Characters/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characters/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Characters/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characters/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Combat/Combat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Combat/Combat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Teams/RandomGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Teams/RandomGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Teams/Teams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Teams/Teams.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +38,20 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Demente/Desktop/Ironhack/IronHackRPGBattle-Ver.4&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="RPJBattle" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
