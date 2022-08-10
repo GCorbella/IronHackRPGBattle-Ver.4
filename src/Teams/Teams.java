@@ -6,19 +6,26 @@ import java.io.FileNotFoundException;
 import java.util.*;
 public class Teams {
 
-public static Character[] createNewTeam(){
+    public static ArrayList<Character> createNewTeam(int numb){
 
 
-    Character[] newTeam = new Character[5];
-    for (int i=0; i< newTeam().length;i++){
-        newTeam[i]= new Character;
+    ArrayList<Character> newTeam = new ArrayList<>();
 
-        return createNewTeam(newTeam);
+    for (int i=0; i<= numb ;i++){
+      int dice = (int) (Math.random()*1)+1;
+      if (dice==1){
+          newTeam.add(getRandomWarrior());
+
+        }else {
+          newTeam.add(getRandomWizard());
+      }
+
+        return newTeam;
     }
 
-public static  Character[] importATeam(){
-        File team = new File("team.csv");
-        Character [] importedTeam = new Character[5];
+    public static ArrayList<Character> importATeam(){
+        File team = new File( "TestTeam.csv");
+            ArrayList<Character>  importedTeam = new ArrayList<>();
         try{
             Scanner inputFile = new Scanner(team);
             inputFile.useDelimiter(",");
@@ -29,6 +36,7 @@ public static  Character[] importATeam(){
         }catch (FileNotFoundException e){
             System.out.println("Check file");
         }
+    return importedTeam;
     }
   }
 
