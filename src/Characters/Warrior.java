@@ -1,12 +1,12 @@
-package PACKAGE_NAME;
+package Characters;
 public class Warrior extends Character {
     private int stamina;
     private int strength;
 
     public Warrior(String name, int hp, int stamina, int strength) {
         super(name, hp);
-        this.stamina = stamina;
-        this.strength = strength;
+        setStamina(stamina);
+        setStrength(strength);
         setClassName("Warrior");
     }
 

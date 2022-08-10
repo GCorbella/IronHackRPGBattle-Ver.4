@@ -1,4 +1,4 @@
-package PACKAGE_NAME;
+package Characters;
 public class Wizard extends Character {
 
 
@@ -8,8 +8,8 @@ public class Wizard extends Character {
 
     public Wizard(String name, int hp, int mana, int intelligence) {
         super(name, hp);
-        this.mana = mana;
-        this.intelligence = intelligence;
+        setMana(mana);
+        setIntelligence(intelligence);
         setClassName("Wizard");
     }
     // method attack.
@@ -18,13 +18,13 @@ public class Wizard extends Character {
 
         int[] damage = new int[2];
 
-        //fuerte
+
         if( getMana() >= 5 ) {
             damage[0] = getIntelligence();
             setMana(getMana() + 1);
             damage[1] = 1;
         }
-        //debil
+
         else {
             damage[0] = 2;
             setMana(getMana() + 1);
