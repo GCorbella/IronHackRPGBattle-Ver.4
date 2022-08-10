@@ -1,4 +1,4 @@
-package Combat;
+package Teams;
 
 import Characters.Warrior;
 import Characters.Wizard;
