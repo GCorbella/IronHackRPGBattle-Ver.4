@@ -25,11 +25,11 @@ public class RandomGenerator {
 
     private static final String[] WARRIOR_NAME = {"The Boulder",
             "Ragnar Lodbrok",
-            "Aquiles",
-            "Aragon",
+            "Achilles",
+            "Aragorn",
             "Lurtz",
-            "El cid",
-            "Juana de arco",
+            "El Cid",
+            "Jeanne D´Arc",
             "Théoden",
             "Faramir",
             "Éomer",
@@ -38,17 +38,16 @@ public class RandomGenerator {
 
     };
     private static final String[] WIZARD_NAME = {
-            "Madame curie",
+            "Madamme Curie",
             "Merlin",
             "Gandalf",
             "Sauron",
-            "Voldemor",
+            "LordVoldemort",
             "Ragadast",
             "Alatar",
             "Pallando",
-            "Rey Brujo",
+            "Witch King",
             "Yavanna",
-
     };
 
 

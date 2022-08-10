@@ -24,7 +24,7 @@ public abstract class Character implements Attacks {
     public int getId() {
         return id;
     }
-    public void setId() {
+    public void setId(int id) {
         this.id = counter;
     }
 

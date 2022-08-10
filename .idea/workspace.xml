@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="616fd316-2f45-4b87-8219-7c7c5aebd7ce" name="Changes" comment="classes ok, Randome conseguido 2">
+    <list default="true" id="616fd316-2f45-4b87-8219-7c7c5aebd7ce" name="Changes" comment="todo ok">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Combat/RandomGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Combat/RandomGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,13 +32,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Demente/Desktop/Ironhack/Excepcions"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Demente/Desktop/Ironhack/IronHackRPGBattle-Ver.4&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -68,7 +69,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660035843348</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="todo ok">
+      <created>1660059216146</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660059216146</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,6 +94,7 @@
     <MESSAGE value="classes ok" />
     <MESSAGE value="classes ok, Randome conseguido" />
     <MESSAGE value="classes ok, Randome conseguido 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="classes ok, Randome conseguido 2" />
+    <MESSAGE value="todo ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="todo ok" />
   </component>
 </project>
