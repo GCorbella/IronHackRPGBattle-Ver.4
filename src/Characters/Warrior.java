@@ -45,9 +45,12 @@ public class Warrior extends Character {
 
     public String toString(){
         return "Name: " +getName()  + " |Type: Warrior |HP: " +
-                getHp() +" |Strength: " + getStrength() + " |Stamina: " + getStamina() + "\n";
+                getHp() +" |Strength: " + getStrength() + " |Stamina: " + getStamina();
     }
 
-
+    public String toCSV(){
+        return "Name: " +getName()  + " |Type: Warrior |HP: " +
+                getHp() +" |Strength: " + getStrength() + " |Stamina: " + getStamina();
+    }
 }
 

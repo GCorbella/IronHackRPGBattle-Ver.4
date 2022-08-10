@@ -18,24 +18,38 @@ public class Menu {
         int opcion; //Guardaremos la opcion del usuario
         int Equipo1 = 0;
         int Equipo2 = 0;
+        int teamSize = 0;
         Combat combat = new Combat();
 
         while (!salir) {
 
-            System.out.println("1. Jugar con equipos random");
-            System.out.println("2. Selecciona tus equipos");
-            System.out.println("3. Salir");
+            System.out.println("1. Play with random teams");
+            System.out.println("2. Import teams");
+            System.out.println("3. Quit");
 
             System.out.println("Escribe una de las opciones");
             opcion = sn.nextInt();
 
             switch (opcion) {
                 case 1:
-                    System.out.println("1. Jugar con equipos random");
-                    ArrayList<Character> team1 = Teams.createNewTeam1(5);
-                    ArrayList<Character> team2 = Teams.createNewTeam2(5);
+                    System.out.println("PLAYING WITH RANDOM TEAMS");
+                    System.out.println("Which size should be the teams?");
+                    teamSize = sn.nextInt();
+                    ArrayList<Character> team1 = Teams.createNewTeam1(teamSize);
+                    ArrayList<Character> team2 = Teams.createNewTeam2(teamSize);
                     combat.setTeam1(team1);
                     combat.setTeam2(team2);
+                    System.out.println("*****************************************");
+                    for (int i = 0; i < team1.size(); i++) {
+                        System.out.println(team1.get(i).toString());
+                    }
+                    System.out.println("*****************************************");
+                    for (int i = 0; i < team2.size(); i++) {
+                        System.out.println(team2.get(i).toString());
+                    }
+                    System.out.println("*****************************************");
+                    System.out.println("Press Enter if you are ready.");
+                    sn.nextInt();
                     combat.battle(team1,team2);
                     break;
                 case 2:

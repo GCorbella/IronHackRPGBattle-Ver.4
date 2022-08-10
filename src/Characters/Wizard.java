@@ -54,7 +54,12 @@ public class Wizard extends Character {
 
     public String toString(){
         return "Name: " +getName()  + " |Type: Wizard |HP: " +
-                getHp() + " |Intelligence: " + getIntelligence() +" |Mana: " + getMana() + "\n";
+                getHp() + " |Intelligence: " + getIntelligence() +" |Mana: " + getMana();
+    }
+
+    public String toCSV(){
+        return "Name: " +getName()  + " |Type: Wizard |HP: " +
+                getHp() + " |Intelligence: " + getIntelligence() +" |Mana: " + getMana();
     }
 }
 

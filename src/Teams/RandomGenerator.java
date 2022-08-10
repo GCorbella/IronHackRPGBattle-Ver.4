@@ -34,8 +34,22 @@ public class RandomGenerator {
             "Faramir",
             "Eomer",
             "Eowyn",
-
-
+            "Hercules",
+            "Odiseus",
+            "Gengis Khan",
+            "Geralt of Rivia",
+            "The Hero of Kvatch",
+            "The Dragonborn",
+            "Guts",
+            "Indibil",
+            "Mandoni",
+            "Hannibal",
+            "Roldan",
+            "Gimli",
+            "Jhonny Sins",
+            "Ghandi",
+            "La Pasionaria",
+            "Yolanda Diaz"
     };
     private static final String[] WIZARD_NAME = {
             "Madamme Curie",
@@ -48,22 +62,32 @@ public class RandomGenerator {
             "Pallando",
             "Witch King",
             "Yavanna",
+            "Skylar Vox",
+            "Albert Einstein",
+            "Nikola Tesla",
+            "Edward Elrich",
+            "Alphonse Elrich",
+            "Jesus",
+            "Aang, the Avatar",
+            "Paco Sanz",
+            "Cristiano Ronaldo",
+            "PdrSnchz"
     };
 
 
 
     public static Warrior getRandomWarrior() {
-        return new Warrior(WARRIOR_NAME[new Random().nextInt(WARRIOR_NAME.length - 1)],
+        return new Warrior(WARRIOR_NAME[new Random().nextInt(0,WARRIOR_NAME.length)],
                 new Random().nextInt(HP_WARRIOR_MIN + 1) + HP_WARRIOR_MAX - HP_WARRIOR_MIN,
                 new Random().nextInt(STAMINA_MIN + 1) + STAMINA_MAX - STAMINA_MIN,
-                new Random().nextInt(STRENGTH_MIN + 1) + STRENGTH_MAX - STRENGTH_MIN);
+                new Random().nextInt(STRENGTH_MIN, STRENGTH_MAX + 1));
     }
 
     public static Wizard getRandomWizard() {
-        return new Wizard(WIZARD_NAME[new Random().nextInt(WARRIOR_NAME.length - 1)],
+        return new Wizard(WIZARD_NAME[new Random().nextInt(0,WARRIOR_NAME.length)],
                 new Random().nextInt(HP_WIZARD_MIN + 1) + HP_WIZARD_MAX - HP_WIZARD_MIN,
                 new Random().nextInt(MANA_MIN + 1) + MANA_MAX - MANA_MIN,
-                new Random().nextInt(INTELLIGENCE_MIN + 1) + INTELLIGENCE_MAX - INTELLIGENCE_MIN);
+                new Random().nextInt(INTELLIGENCE_MIN, INTELLIGENCE_MAX + 1));
 
     }
     public static int getHpWarriorMin() {

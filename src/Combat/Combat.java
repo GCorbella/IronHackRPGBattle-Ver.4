@@ -12,49 +12,57 @@ public class Combat {
     Scanner sc = new Scanner(System.in);
     //content variables
     ArrayList<Character> team1;
+    ArrayList<Character> savedTeam1;
     //String team1Name = Menu.getTeam1Name;
     ArrayList<Character> team2;
+    ArrayList<Character> savedTeam2;
     //String team2Name = Menu.getTeam2Name;
     ArrayList<Character> corpses = new ArrayList<>();
-    String graveyard = "The graveyard contains the corpses of the next fighters:\n";
+    String graveyard = "THE GRAVEYARD CONTAINS THE CORPSES OF THE NEXT FIGHTERS:\n";
 
     //principal combat method that implements all the other methods
     public void battle(ArrayList<Character> team1, ArrayList<Character> team2) throws InterruptedException {
-        while (!team1.isEmpty() || !team2.isEmpty()){
+        boolean noWinner = true;
+        while (noWinner){
             boolean run = false;
             fight(team1.get(random.nextInt(0,team1.size())), team2.get(random.nextInt(0,team2.size())));
             System.out.println("The combat is over.");
             while (run == false) {
                 System.out.println("""
+                        ----------------------------------------------
                         What do you want to do?
                         1.- Next combat.
-                        2.- Visit the graveyard.""");
+                        2.- Show teams state.
+                        3.- Visit the graveyard.
+                        ----------------------------------------------""");
                 String option = sc.nextLine();
-                if (option.equals("1")){
-                    run = true;
+                switch (option) {
+                    case "1" -> run = true;
+                    case "2" -> {
+                        System.out.println("*****************************************");
+                        for (Character character : team1) {
+                            System.out.println(character.toString());
+                        }
+                        System.out.println("*****************************************");
+                        for (Character character : team2) {
+                            System.out.println(character.toString());
+                        }
+                        System.out.println("*****************************************");
+                    }
+                    case "3" -> showGraveyard();
+                    default -> System.out.println("Insert only 1 or 2, please. =)");
                 }
-                else if (option.equals("2")) {
-                    showGraveyard();
-                }
-                else {
-                    System.out.println("Insert only 1 or 2, please. =)");
-                }
+            }
+            if (team1.isEmpty()){
+                noWinner = false;
+            } else if (team2.isEmpty()) {
+                noWinner = false;
             }
         }
         if(team1.isEmpty()){
-            System.out.println("TEAM 2 HAVE WON THE BATTLE!");
-            System.out.println("These are the names of the brave survivors:");
-            for (int i = 0; i < team2.size(); i++) {
-                System.out.println(team2.get(i).getName());
-            }
-            System.out.println("Farewell fighters and may fortune be with you!");
+           victory(team2);
         } else {
-            System.out.println("TEAM 1 HAVE WON THE BATTLE!");
-            System.out.println("These are the names of the brave survivors:");
-            for (int i = 0; i < team1.size(); i++) {
-                System.out.println(team1.get(i).getName());
-            }
-            System.out.println("Farewell fighters and may fortune be with you!");
+            victory(team1);
         }
     }
 
@@ -65,12 +73,12 @@ public class Combat {
             int[] damageF1 = fighter1.attack();
             int[] damageF2 = fighter2.attack();
             System.out.println("The fighters attack each other!");
-            System.out.println("-------------------------------------------");
+            System.out.println("----------------------------------------------");
             System.out.println(fighter1.getName() + " deals " + damageF1[0] + " damage.");
             System.out.println(fighter2.getName() + " deals " + damageF2[0] + " damage.");
             fighter1.setHp(fighter1.getHp() - damageF2[0]);
             fighter2.setHp(fighter2.getHp() - damageF1[0]);
-            System.out.println("===========================================");
+            System.out.println("==============================================");
             Thread.sleep(1000);
             if (fighter1.getHp() <= 0){
                 noDeads = true;
@@ -96,14 +104,62 @@ public class Combat {
         System.out.println(dead.getName() + ", was killed by " + killer.getName());
     }
     public void showGraveyard(){
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+        System.out.println("""
+                      ,-=-.       ______     _
+                     /  +  \\     />----->  _|1|_
+                     | ~~~ |    // -/- /  |_ H _|
+                     |R.I.P|   //  /  /     |S|
+                \\vV,,|_____|V,//_____/VvV,v,|_|/,,vhjwv/,""");
         System.out.println(graveyard);
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+    }
+
+    public void victory(ArrayList<Character> winners){
+        System.out.println("*****************************************");
+        System.out.println("THE BATTLE IS OVER!");
+        System.out.println("*****************************************");
+        System.out.println("These are the names of the brave survivors:");
+        System.out.println("-------------------------------------------");
+        for (int i = 0; i < winners.size(); i++) {
+            System.out.println(winners.get(i).getName());
+        }
+        System.out.println("*****************************************");
+            /*System.out.println("Do you want to save this fighters team? y/n");
+            String option = sc.nextLine();*/
+        System.out.println("Farewell fighters and may fortune be with you!");
+        System.out.println("""
+                                                 /\\
+                                                /  \\
+                                               |    |
+                                             --:'''':--
+                                               :'_' :
+                                               _:"":\\___
+                                ' '      ____.' :::     '._
+                               . *=====<<=)           \\    :
+                                .  '      '-'-'\\_      /'._.'
+                                                 \\====:_ ""
+                                                .'     \\\\
+                                               :       :
+                                              /   :    \\
+                                             :   .      '.
+                             ,. _            :  : :      :
+                          '-'    ).          :__:-:__.;--'
+                        (        '  )        '-'   '-'
+                     ( -   .00.   - _
+                    (    .'  _ )     )
+                    '-  ()_.\\,\\,   -
+                    ===========================================================
+                    ___________________________________________________________""");
     }
 
     public void setTeam1(ArrayList<Character> team1){
         this.team1 = team1;
+        this.savedTeam1 = team1;
     }
 
     public void setTeam2(ArrayList<Character> team2){
         this.team2 = team2;
+        this.savedTeam2 = team2;
     }
 }
