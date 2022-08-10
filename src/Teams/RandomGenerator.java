@@ -84,7 +84,7 @@ public class RandomGenerator {
     }
 
     public static Wizard getRandomWizard() {
-        return new Wizard(WIZARD_NAME[new Random().nextInt(0,WARRIOR_NAME.length)],
+        return new Wizard(WIZARD_NAME[new Random().nextInt(0,WIZARD_NAME.length)],
                 new Random().nextInt(HP_WIZARD_MIN + 1) + HP_WIZARD_MAX - HP_WIZARD_MIN,
                 new Random().nextInt(MANA_MIN + 1) + MANA_MAX - MANA_MIN,
                 new Random().nextInt(INTELLIGENCE_MIN, INTELLIGENCE_MAX + 1));
