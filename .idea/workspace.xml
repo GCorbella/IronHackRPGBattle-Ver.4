@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="616fd316-2f45-4b87-8219-7c7c5aebd7ce" name="Changes" comment="Combat fixed and enhanced. Fixed random generators, Character classes and the menu." />
+    <list default="true" id="616fd316-2f45-4b87-8219-7c7c5aebd7ce" name="Changes" comment="Wizard random generator fixed.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Characters/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characters/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Characters/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Characters/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Combat/Combat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Combat/Combat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Teams/Teams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Teams/Teams.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +36,11 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Demente/Desktop/Ironhack/IronHackRPGBattle-Ver.4&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java\IronHackRPGBattle-Ver.4\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -80,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660161789436</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Wizard random generator fixed.">
+      <created>1660162497631</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1660162497631</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,6 +118,7 @@
     <MESSAGE value="Primera prueba" />
     <MESSAGE value="Combat fixed. Other minor issues fixed too." />
     <MESSAGE value="Combat fixed and enhanced. Fixed random generators, Character classes and the menu." />
-    <option name="LAST_COMMIT_MESSAGE" value="Combat fixed and enhanced. Fixed random generators, Character classes and the menu." />
+    <MESSAGE value="Wizard random generator fixed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Wizard random generator fixed." />
   </component>
 </project>

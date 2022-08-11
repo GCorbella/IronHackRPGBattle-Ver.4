@@ -66,6 +66,26 @@ public class Combat {
         }
     }
 
+    public void fastBattle(ArrayList<Character> team1, ArrayList<Character> team2) throws InterruptedException {
+        boolean noWinner = true;
+        while (noWinner){
+            fastFight(team1.get(random.nextInt(0,team1.size())), team2.get(random.nextInt(0,team2.size())));
+            System.out.println("The combat is over.");
+            if (team1.isEmpty()){
+                noWinner = false;
+            } else if (team2.isEmpty()) {
+                noWinner = false;
+            }
+        }
+        if(team1.isEmpty()){
+            showGraveyard();
+            victory(team2);
+        } else {
+            showGraveyard();
+            victory(team1);
+        }
+    }
+
     //fight method that confront une fighter vs another
     public void fight(Character fighter1, Character fighter2) throws InterruptedException {
         boolean noDeads = false;
@@ -90,6 +110,30 @@ public class Combat {
             }
         }
     }
+
+    public void fastFight(Character fighter1, Character fighter2) throws InterruptedException {
+        boolean noDeads = false;
+        while (noDeads == false) {
+            int[] damageF1 = fighter1.attack();
+            int[] damageF2 = fighter2.attack();
+            System.out.println("The fighters attack each other!");
+            System.out.println("----------------------------------------------");
+            System.out.println(fighter1.getName() + " deals " + damageF1[0] + " damage.");
+            System.out.println(fighter2.getName() + " deals " + damageF2[0] + " damage.");
+            fighter1.setHp(fighter1.getHp() - damageF2[0]);
+            fighter2.setHp(fighter2.getHp() - damageF1[0]);
+            System.out.println("==============================================");
+            if (fighter1.getHp() <= 0){
+                noDeads = true;
+                kill(fighter1, fighter2);
+            }
+            if (fighter2.getHp() <= 0) {
+                noDeads = true;
+                kill(fighter2, fighter1);
+            }
+        }
+    }
+
     public void kill(Character dead, Character killer){
         graveyard += dead.getName() + ", who was killed by " + killer.getName() + "\n";
         if(team1.contains(dead)){
@@ -151,6 +195,8 @@ public class Combat {
                     '-  ()_.\\,\\,   -
                     ===========================================================
                     ___________________________________________________________""");
+        System.out.println("Press Enter to return to the menu.");
+        sc.nextLine();
     }
 
     public void setTeam1(ArrayList<Character> team1){

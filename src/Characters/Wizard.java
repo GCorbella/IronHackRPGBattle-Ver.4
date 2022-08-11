@@ -58,8 +58,7 @@ public class Wizard extends Character {
     }
 
     public String toCSV(){
-        return "Name: " +getName()  + " |Type: Wizard |HP: " +
-                getHp() + " |Intelligence: " + getIntelligence() +" |Mana: " + getMana();
+        return getName() + "," + getHp() + "," + getMana() + "," + getIntelligence() + "," + 1;
     }
 }
 
