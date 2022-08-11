@@ -3,11 +3,11 @@ An RPG Battle Simulator made it with Java for the Java Back-End Bootcamp of Iron
 
 <h1>How to play.</h1>
 
-Select the play mode, you can play with random teams or make your owns teams.
+Select the play mode, you can play with random teams or import your own teams from a CSV file.
 
 1. Play with random teams.
 
-2. Make your owns teams.
+2. Import your own teams.
 
 3. Exit.
 
