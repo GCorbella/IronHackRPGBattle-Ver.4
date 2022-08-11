@@ -16,9 +16,7 @@ public class Menu {
 
         boolean salir = false;
 
-        int opcion; //Guardaremos la opcion del usuario
-        int Equipo1 = 0;
-        int Equipo2 = 0;
+        int opcion; //Will save the user option
         int teamSize = 0;
         Combat combat = new Combat();
 
@@ -76,15 +74,14 @@ public class Menu {
                     }
                     break;
                 case 2:
-                    System.out.println("2. Selecciona tus equipos");
                     System.out.println("Write team 1 rute.");
                     sn.nextLine();
                     File rute1 = new File(sn.nextLine());
                     team1 = Teams.importPartyCsv(rute1);
-                    System.out.println("Write team 2 rute.");
-                    sn.nextLine();
-                    File rute2 = new File(sn.nextLine());
-                    team2 = Teams.importPartyCsv(rute1);
+                    combat.setTeam1(team1);
+                    System.out.println("Which size should be the other team?");
+                    teamSize = sn.nextInt();
+                    team2 = Teams.createNewTeam2(teamSize);
                     combat.setTeam1(team1);
                     combat.setTeam2(team2);
                     System.out.println("*****************************************");
@@ -113,19 +110,14 @@ public class Menu {
                             System.out.println("Enter only f (fast battle) or n (normal battle).");
                         }
                     }
+                    break;
 
                 case 3:
                     salir = true;
                     break;
                 default:
-                    System.out.println("Debes seleccionar una opcion");
+                    System.out.println("You must select a valid option.");
             }
-
-
         }
-
-
     }
-
-
 }

@@ -1,7 +1,10 @@
 package Combat;
 
 import Characters.Character;
+import Characters.Warrior;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -60,9 +63,9 @@ public class Combat {
             }
         }
         if(team1.isEmpty()){
-           victory(team2);
+           victory(team2, savedTeam2);
         } else {
-            victory(team1);
+            victory(team1, savedTeam1);
         }
     }
 
@@ -79,10 +82,10 @@ public class Combat {
         }
         if(team1.isEmpty()){
             showGraveyard();
-            victory(team2);
+            victory(team2, savedTeam2);
         } else {
             showGraveyard();
-            victory(team1);
+            victory(team1, savedTeam1);
         }
     }
 
@@ -159,7 +162,7 @@ public class Combat {
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
     }
 
-    public void victory(ArrayList<Character> winners){
+    public void victory(ArrayList<Character> winners, ArrayList<Character> winnersFullTeam){
         System.out.println("*****************************************");
         System.out.println("THE BATTLE IS OVER!");
         System.out.println("*****************************************");
@@ -169,8 +172,8 @@ public class Combat {
             System.out.println(winners.get(i).getName());
         }
         System.out.println("*****************************************");
-            /*System.out.println("Do you want to save this fighters team? y/n");
-            String option = sc.nextLine();*/
+        //System.out.println("Do you want to save this fighters team? y/n");
+        //String option = sc.nextLine();
         System.out.println("Farewell fighters and may fortune be with you!");
         System.out.println("""
                                                  /\\
@@ -208,4 +211,18 @@ public class Combat {
         this.team2 = team2;
         this.savedTeam2 = team2;
     }
+
+    //Method in progress, unfinished
+    /*public void exportTeamCSV(ArrayList<Character> exportedTeam, String exportedTeamName) throws IOException {
+        FileWriter writer = new FileWriter(exportedTeamName + ".csv", true);
+
+        writer.write("Exported winner team");
+        for (int i = 0; i < exportedTeam.size(); i++) {
+            if (exportedTeam.get(i).getClassName() == Warrior)
+            exportedTeam.get(i).toCSV();
+            writer.write("Age: " + employees[i].getAge() + ", ");
+            writer.write("Salary: " + employees[i].getSalary() + "\n");
+        }
+        writer.close();
+    }*/
 }

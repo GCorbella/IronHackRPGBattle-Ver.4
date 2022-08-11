@@ -49,14 +49,17 @@ public class RandomGenerator {
             "Jhonny Sins",
             "Ghandi",
             "La Pasionaria",
-            "Yolanda Diaz"
+            "Yolanda Diaz",
+            "Rafa Mora",
+            "John Cobra",
+            "El Batu"
     };
     private static final String[] WIZARD_NAME = {
             "Madamme Curie",
             "Merlin",
             "Gandalf",
             "Sauron",
-            "LordVoldemort",
+            "Lord Voldemort",
             "Ragadast",
             "Alatar",
             "Pallando",
@@ -71,7 +74,16 @@ public class RandomGenerator {
             "Aang, the Avatar",
             "Paco Sanz",
             "Cristiano Ronaldo",
-            "PdrSnchz"
+            "PdrSnchz",
+            "Terelu Campos",
+            "Flipy",
+            "Walter White",
+            "Jimmy Neutron",
+            "Sarunil",
+            "Mia Khalifa",
+            "Carmen Elektra",
+            "Mark Zuckerberg",
+            "El Guardian de las Estrellas"
     };
 
 
