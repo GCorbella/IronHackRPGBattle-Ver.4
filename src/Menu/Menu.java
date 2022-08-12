@@ -40,8 +40,18 @@ public class Menu {
             switch (opcion) {
                 case 1:
                     System.out.println("PLAYING WITH RANDOM TEAMS");
-                    System.out.println("Which size should be the teams?");
-                    teamSize = sn.nextInt();
+                    boolean teamSizeQ = false;
+                    while (!teamSizeQ){
+                        System.out.println("Which size should be the teams?");
+                        teamSize = sn.nextInt();
+                        if (teamSize > 0){
+                            teamSizeQ = true;
+                        } else {
+                            System.out.println("Enter a number bigger than 0.");
+                            System.out.println("Which size should be the teams?");
+                            teamSize = sn.nextInt();
+                        }
+                    }
                     ArrayList<Character> team1 = Teams.createNewTeam1(teamSize);
                     ArrayList<Character> team2 = Teams.createNewTeam2(teamSize);
                     combat.setTeam1(team1);
@@ -60,16 +70,21 @@ public class Menu {
                             1.- Fast battle.
                             2.- Normal battle""");
                     int election = sn.nextInt();
-                    boolean nocombat = true;
-                    while (nocombat) {
+                    boolean battleModeElection = true;
+                    while (battleModeElection) {
                         if (election == 1) {
-                            nocombat = false;
+                            battleModeElection = false;
                             combat.fastBattle(team1, team2);
                         } else if (election == 2) {
-                            nocombat = false;
+                            battleModeElection = false;
                             combat.battle(team1, team2);
                         } else {
                             System.out.println("Enter only f (fast battle) or n (normal battle).");
+                            System.out.println("""
+                            Do you want to make a:
+                            1.- Fast battle.
+                            2.- Normal battle""");
+                            election = sn.nextInt();
                         }
                     }
                     break;
@@ -98,16 +113,21 @@ public class Menu {
                             1.- Fast battle.
                             2.- Normal battle""");
                     int electionCsv = sn.nextInt();
-                    boolean noCombat = true;
-                    while (noCombat) {
+                    boolean battleModeElectionCsv = true;
+                    while (battleModeElectionCsv) {
                         if (electionCsv == 1) {
-                            noCombat = false;
+                            battleModeElectionCsv = false;
                             combat.fastBattle(team1, team2);
                         } else if (electionCsv == 2) {
-                            noCombat = false;
+                            battleModeElectionCsv = false;
                             combat.battle(team1, team2);
                         } else {
                             System.out.println("Enter only f (fast battle) or n (normal battle).");
+                            System.out.println("""
+                            Do you want to make a:
+                            1.- Fast battle.
+                            2.- Normal battle""");
+                            electionCsv = sn.nextInt();
                         }
                     }
                     break;
